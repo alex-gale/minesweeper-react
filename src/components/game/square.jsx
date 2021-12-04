@@ -2,13 +2,6 @@ import { useEffect, useState } from 'react'
 import './square.scss'
 
 const Square = ({ updateSubscribe, updateUnsubscribe, x, y, onMouseDown, onMouseUp, onMouseEnter, onMouseLeave }) => {
-  const [squareData, setSquareData] = useState({})
-
-  const [value, setValue] = useState()
-  const [opened, setOpened] = useState()
-  const [highlighted, setHighlighted] = useState()
-  const [flagged, setFlagged] = useState()
-
   const [className, setClassName] = useState('square')
   // const _class = `square${opened ? ' opened' : ' closed'}${opened ? ` value_${value}` : ''}${highlighted ? ' highlighted' : ''}${flagged ? ' flagged' : ''}`
 
