@@ -3,9 +3,9 @@ import './square.scss'
 
 const Square = ({ updateSubscribe, updateUnsubscribe, x, y, onMouseDown, onMouseUp, onMouseEnter, onMouseLeave }) => {
   const [className, setClassName] = useState('square')
-  // const _class = `square${opened ? ' opened' : ' closed'}${opened ? ` value_${value}` : ''}${highlighted ? ' highlighted' : ''}${flagged ? ' flagged' : ''}`
 
   useEffect(() => {
+    // subscribe to board updates on this square (x, y), changing the class when an update is recieved
     updateSubscribe(x, y, (data) => {
       const { value, opened, highlighted, flagged } = data
       setClassName(`square${opened ? ' opened' : ' closed'}${opened ? ` value_${value}` : ''}${highlighted ? ' highlighted' : ''}${flagged ? ' flagged' : ''}`)

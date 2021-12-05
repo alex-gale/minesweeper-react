@@ -1,5 +1,4 @@
 import { Game } from './components'
-import './App.scss'
 
 const App = () => {
   return (

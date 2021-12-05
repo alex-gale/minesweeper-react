@@ -1,6 +1,7 @@
 import React from 'react'
-import './board.scss'
 import Square from './square'
+
+import './board.scss'
 
 const Board = ({ board, subscribeFunction, unsubscribeFunction, onMouseDown, onMouseUp, onMouseEnter, onMouseLeave }) => {
   return (

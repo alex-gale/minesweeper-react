@@ -2,11 +2,18 @@ import React, { useEffect, useState } from 'react'
 
 import Board from './board'
 import MSGame from '../../lib/minesweeper'
+import images from '../../assets/minesweeper'
 
 const Game = ({ width, height, mines }) => {
   const [game, setGame] = useState()
-  // const [, updateState] = useState()
-  // const forceUpdate = useCallback(() => updateState({}), [])
+
+  useEffect(() => {
+    // Preload all images
+    images.forEach(img => {
+      const image = new window.Image()
+      image.src = img
+    })
+  }, [])
 
   useEffect(() => {
     setGame(new MSGame(width, height, mines))
